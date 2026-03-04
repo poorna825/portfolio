@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { GraduationCap, Calendar, MapPin } from 'lucide-react';
+import { GraduationCap } from 'lucide-react';
 import { resumeData } from '../data';
 
 const Education: React.FC = () => {

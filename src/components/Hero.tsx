@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowDown, Download, ExternalLink, Award, Code, Globe } from 'lucide-react';
+import { ArrowDown, Download, Award, Code, Globe } from 'lucide-react';
 import { resumeData } from '../data';
 
 const Hero: React.FC = () => {

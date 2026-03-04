@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Trophy, Award, Star, Zap } from 'lucide-react';
 import { resumeData } from '../data';
-import { cn } from '../utils';
 
 const Achievements: React.FC = () => {
   const icons = [Trophy, Award, Star, Zap];

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import SplashScreen from './components/SplashScreen';
 import AnimatedBackground from './components/AnimatedBackground';
