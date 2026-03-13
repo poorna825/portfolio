@@ -1,15 +1,9 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowDown, Download, Award, Code, Globe } from 'lucide-react';
+import { ArrowDown, Download } from 'lucide-react';
 import { resumeData } from '../data';
 
 const Hero: React.FC = () => {
-  const topImpacts = [
-    { icon: Globe, label: "Sakura Science Program", context: "Represented school in Japan (2023)" },
-    { icon: Award, label: "AWS Cloud Practitioner", context: "Foundational Cloud Certification" },
-    { icon: Code, label: "SereneSpace Prototype", context: "React-based Mental Health App" }
-  ];
-
   return (
     <section id="home" className="relative flex min-h-screen flex-col items-center justify-center px-6 pt-20">
       {/* Background Glow */}
@@ -68,11 +62,12 @@ const Hero: React.FC = () => {
             href="#projects"
             className="group relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-2xl bg-white px-8 py-4 text-sm font-bold text-black transition-all hover:scale-105 sm:w-auto"
           >
-            View Experience
+            View Projects
             <ArrowDown size={16} className="transition-transform group-hover:translate-y-1" />
           </a>
           <a
-            href="#education"
+            href={resumeData.basics.resumeUrl}
+            download
             className="flex w-full items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-8 py-4 text-sm font-bold text-white backdrop-blur-md transition-all hover:bg-white/10 sm:w-auto"
           >
             Download Resume
@@ -80,29 +75,6 @@ const Hero: React.FC = () => {
           </a>
         </motion.div>
       </div>
-
-      {/* Impact Strip */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-        className="mt-24 grid w-full max-w-6xl grid-cols-1 gap-4 px-6 sm:grid-cols-3"
-      >
-        {topImpacts.map((impact, idx) => (
-          <div
-            key={idx}
-            className="group relative flex flex-col gap-3 rounded-3xl border border-white/5 bg-white/[0.02] p-6 backdrop-blur-sm transition-all hover:border-white/10 hover:bg-white/[0.05]"
-          >
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-white transition-all group-hover:scale-110 group-hover:bg-white group-hover:text-black">
-              <impact.icon size={20} />
-            </div>
-            <div>
-              <h3 className="text-sm font-bold text-white">{impact.label}</h3>
-              <p className="text-xs text-white/40">{impact.context}</p>
-            </div>
-          </div>
-        ))}
-      </motion.div>
 
       {/* Scroll Indicator */}
       <motion.div
